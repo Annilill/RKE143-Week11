@@ -6,7 +6,6 @@ const randomRouter = require('./routes/randomRecipe.routes');
 const app = express();
 
 const db = require("./db");
-
 db.query(`
 DROP TABLE IF EXISTS ingredientinrecipe;
 DROP TABLE IF EXISTS ingredient;
