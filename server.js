@@ -29,7 +29,7 @@ CREATE TABLE ingredientinrecipe (
     recipeId INTEGER REFERENCES recipe(id),
     ingredientId INTEGER REFERENCES ingredient(id)
 );
-INSERT INTO recipe (recipeName, imageURL, instructions)
+
 VALUES
 INSERT INTO recipe (recipeName, imageURL, instructions)
 VALUES
@@ -92,7 +92,7 @@ app.use('/retsepti', recipeRouter);
 app.use('/fullRecipes', fullRecipesRouter);
 app.use('/random', randomRouter);
 app.get('/fix-images', async (req, res) => {
-  await pool.query(`
+ await db.query(`
     UPDATE recipe
     SET imageURL = 'https://images.pexels.com/photos/18932267/pexels-photo-18932267/free-photo-of-ornamental-pumpkins-and-a-plate-with-baked-pastry.jpeg'
     WHERE id = 1;
