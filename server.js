@@ -105,7 +105,9 @@ app.get('/fix-images', async (req, res) => {
     UPDATE recipe
     SET imageURL = 'https://images.pexels.com/photos/5605535/pexels-photo-5605535.jpeg'
     WHERE id = 3
-    UPDATE recipe SET imageURL = 'https://images.pexels.com/photos/5377574/pexels-photo-5377574.jpeg' WHERE id = 4;
+    UPDATE recipe
+    SET imageURL = 'https://images.pexels.com/photos/5377574/pexels-photo-5377574.jpeg'
+     WHERE id = 4;
   `);
 
   res.send('Images fixed');
