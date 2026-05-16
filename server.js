@@ -35,7 +35,8 @@ INSERT INTO recipe (recipeName, imageURL, instructions)
 VALUES
 ('Pumpkin Pasties', 'https://images.pexels.com/photos/18932267/pexels-photo-18932267/free-photo-of-ornamental-pumpkins-and-a-plate-with-baked-pastry.jpeg', 'Mix pumpkin puree, sugar, and spices.'),
 ('Pumpkin Tartlets', 'https://images.pexels.com/photos/4917092/pexels-photo-4917092.jpeg', 'Mix pumpkin puree, brown sugar, and spices.'),
-('Creamy Pumpkin Soup', 'https://images.pexels.com/photos/5605535/pexels-photo-5605535.jpeg', 'Saute the onion and garlic in a pot until soft.');
+('Creamy Pumpkin Soup', 'https://images.pexels.com/photos/5605535/pexels-photo-5605535.jpeg', 'Saute the onion and garlic in a pot until soft.')
+('Pumpkin Pancakes', 'https://images.pexels.com/photos/5377574/pexels-photo-5377574.jpeg', 'Mix ingredients and fry pancakes.');
 
 INSERT INTO ingredient (ingredientName)
 VALUES
@@ -103,7 +104,8 @@ app.get('/fix-images', async (req, res) => {
 
     UPDATE recipe
     SET imageURL = 'https://images.pexels.com/photos/5605535/pexels-photo-5605535.jpeg'
-    WHERE id = 3;
+    WHERE id = 3
+    UPDATE recipe SET imageURL = 'https://images.pexels.com/photos/5377574/pexels-photo-5377574.jpeg' WHERE id = 4;
   `);
 
   res.send('Images fixed');
