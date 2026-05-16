@@ -31,16 +31,11 @@ CREATE TABLE ingredientinrecipe (
 );
 INSERT INTO recipe (recipeName, imageURL, instructions)
 VALUES
-<<<<<<< HEAD
-('Pumpkin Pasties', 'https://images.pexels.com/photos/18932267/pexels-photo-18932267/free-photo-of-ornamental-pumpkins-and-a-plate-with-baked-pastry.jpeg', 'Mix pumpkin puree, sugar, and spices in a bowl. Roll out the pastry dough and cut it into small circles. Place a spoonful of the pumpkin mixture in the center of each circle. Fold the dough over to create a half-moon shape and crimp the edges with a fork. Brush the pasties with egg wash. Bake at 375°F for 20-25 minutes.'),
-('Pumpkin Tartlets', 'https://images.pexels.com/photos/4917092/pexels-photo-4917092.jpeg', 'Mix pumpkin puree, brown sugar, and spices in a bowl. Spoon the mixture into mini tart shells. Bake at 350°F for 15-20 minutes. Let cool and garnish with whipped cream.'),
-('Creamy Pumpkin Soup', 'https://images.pexels.com/photos/5605535/pexels-photo-5605535.jpeg', 'Saute the onion and garlic in a pot until soft. Add the pumpkin puree and vegetable broth, and simmer for 20 minutes. Blend the soup until smooth, then stir in the heavy cream.');
-=======
-('Pumpkin Pasties', 'https://example.com/pumpkin-pasties.jpg', 'Pumpkin recipe'),
-('Pumpkin Tartlets', 'https://example.com/pumpkin-tartlets.jpg', 'Tartlets recipe'),
-('Creamy Pumpkin Soup', 'https://example.com/creamy-pumpkin-soup.jpg', 'Soup recipe'),
-('Pumpkin Pancakes', 'https://example.com/pumpkin-pancakes.jpg', 'Mix ingredients and fry pancakes.');
->>>>>>> 43f681f2c5a58c14b96fa2a5301f675f5207ac34
+INSERT INTO recipe (recipeName, imageURL, instructions)
+VALUES
+('Pumpkin Pasties', 'https://images.pexels.com/photos/18932267/pexels-photo-18932267/free-photo-of-ornamental-pumpkins-and-a-plate-with-baked-pastry.jpeg', 'Mix pumpkin puree, sugar, and spices.'),
+('Pumpkin Tartlets', 'https://images.pexels.com/photos/4917092/pexels-photo-4917092.jpeg', 'Mix pumpkin puree, brown sugar, and spices.'),
+('Creamy Pumpkin Soup', 'https://images.pexels.com/photos/5605535/pexels-photo-5605535.jpeg', 'Saute the onion and garlic in a pot until soft.');
 
 INSERT INTO ingredient (ingredientName)
 VALUES
