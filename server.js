@@ -91,6 +91,23 @@ app.use('/recipes', recipeRouter);
 app.use('/retsepti', recipeRouter);
 app.use('/fullRecipes', fullRecipesRouter);
 app.use('/random', randomRouter);
+app.get('/fix-images', async (req, res) => {
+  await pool.query(`
+    UPDATE recipe
+    SET imageURL = 'https://images.pexels.com/photos/18932267/pexels-photo-18932267/free-photo-of-ornamental-pumpkins-and-a-plate-with-baked-pastry.jpeg'
+    WHERE id = 1;
+
+    UPDATE recipe
+    SET imageURL = 'https://images.pexels.com/photos/4917092/pexels-photo-4917092.jpeg'
+    WHERE id = 2;
+
+    UPDATE recipe
+    SET imageURL = 'https://images.pexels.com/photos/5605535/pexels-photo-5605535.jpeg'
+    WHERE id = 3;
+  `);
+
+  res.send('Images fixed');
+});
 
 app.listen(process.env.PORT || 3000, () => {
     console.log('Server is running on Port 3000.');
